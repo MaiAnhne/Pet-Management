@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Mô tả Dự án
+## Mô tả Dự án
 Ứng dụng web **Pet Management** giúp quản lý thú cưng và thông tin khách hàng, đồng thời theo dõi việc nuôi dưỡng thú cưng bởi từng khách hàng. Dự án được xây dựng bằng **Laravel Framework**, sử dụng **Laravel Breeze** cho xác thực người dùng...
 
 ---
@@ -30,12 +30,9 @@
 ---
 
 ## Bảo mật (Security)
-- ✅ CSRF Protection  
-- ✅ XSS Protection  
-- ✅ SQL Injection Prevention (Eloquent ORM)  
-- ✅ Data Validation  
-- ✅ Authentication & Authorization (Laravel Breeze)  
-- ✅ Session & Cookies management  
+- Data Validation  
+- Authentication & Authorization (Laravel Breeze)  
+- Session & Cookies management  
 
 ---
 
