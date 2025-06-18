@@ -86,7 +86,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
    - Lưu thông tin thú cưng: tên, loài, tuổi, mô tả
 
 4. **PetOwner** (bảng `pet_owners`)  
-   - Thể hiện mối quan hệ nhiều-nhiều giữa **Owner** và **Pet**  
+   - Thể hiện mối quan hệ giữa **Owner** và **Pet**  
    - Là model đại diện cho **Pet Owner** trong hệ thống  
 
 ## Chức năng chính
