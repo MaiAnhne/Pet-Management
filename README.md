@@ -115,7 +115,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ###  Model: `Pet.php`
 
 class Pet extends Model {
-    protected $fillable = ['name', 'type', 'age'];
+    protected $fillable = ['id', 'name', 'type', 'age'];
 
     public function owners() {
         return $this->belongsToMany(Owner::class, 'pet_owners');
@@ -124,7 +124,7 @@ class Pet extends Model {
 ###  Model: Owner.php
 
 class Owner extends Model {
-    protected $fillable = ['name', 'email', 'phone'];
+    protected $fillable = ['id', 'name', 'email', 'phone'];
 
     public function pets() {
         return $this->belongsToMany(Pet::class, 'pet_owners');
