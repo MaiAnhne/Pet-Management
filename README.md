@@ -106,3 +106,53 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Cấu trúc hệ thống (Class Diagram)
 >>>>>>> bdab1a9baaae1ca84180f1d850e18370c8a6f972
+
+
+
+
+## Code minh họa phần chính
+
+###  Model: `Pet.php`
+
+class Pet extends Model {
+    protected $fillable = ['name', 'type', 'age'];
+
+    public function owners() {
+        return $this->belongsToMany(Owner::class, 'pet_owners');
+    }
+}
+###  Model: Owner.php
+
+class Owner extends Model {
+    protected $fillable = ['name', 'email', 'phone'];
+
+    public function pets() {
+        return $this->belongsToMany(Pet::class, 'pet_owners');
+    }
+}
+###  Model: PetOwner.php
+
+class PetOwner extends Model {
+    protected $table = 'pet_owners';
+
+    public function pet() {
+        return $this->belongsTo(Pet::class);
+    }
+
+    public function owner() {
+        return $this->belongsTo(Owner::class);
+    }
+}
+### Controller: PetOwnerController.php (Gán thú cưng cho khách)
+
+public function assignPetToOwner(Request $request) {
+    $request->validate([
+        'pet_id' => 'required|exists:pets,id',
+        'owner_id' => 'required|exists:owners,id',
+    ]);
+
+    $owner = Owner::find($request->owner_id);
+    $owner->pets()->attach($request->pet_id);
+
+    return back()->with('success', 'Đã gán thú cưng thành công!');
+}
