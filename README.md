@@ -75,27 +75,32 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ---
 
 ## Các đối tượng chính
-1. **Pet** – Quản lý thông tin thú cưng
-2. **Customer** – Quản lý thông tin khách hàng
-3. **PetCustomer** – Quản lý mối quan hệ nuôi thú cưng giữa khách hàng và thú cưng
-4. **User** – Xác thực đăng nhập hệ thống (sử dụng Laravel Breeze)
 
----
+1. **User**  
+   - Xác thực người dùng (Laravel Breeze)
+
+2. **Owner**  
+   - Lưu thông tin khách hàng: tên, email, số điện thoại
+
+3. **Pet**  
+   - Lưu thông tin thú cưng: tên, loài, tuổi, mô tả
+
+4. **PetOwner** (bảng `pet_owners`)  
+   - Thể hiện mối quan hệ nhiều-nhiều giữa **Owner** và **Pet**  
+   - Là model đại diện cho **Pet Owner** trong hệ thống  
 
 ## Chức năng chính
 - Đăng nhập / đăng ký người dùng
 - Quản lý danh sách thú cưng (CRUD)
-- Quản lý khách hàng (CRUD)
 - Gán thú cưng cho khách hàng (Pet-Customer)
 - Thống kê thú cưng được nuôi nhiều nhất
 - Hiển thị danh sách thú cưng theo từng khách hàng
-
 ---
 
 ## Bảo mật (Security)
 - Data Validation  
 - Authentication & Authorization (Laravel Breeze)  
-- Session & Cookies management  
+- Session & Cookies management 
 
 ---
 
