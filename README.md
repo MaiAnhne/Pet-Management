@@ -105,9 +105,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ---
 
 ## Cấu trúc hệ thống (Class Diagram)
->>>>>>> bdab1a9baaae1ca84180f1d850e18370c8a6f972
-
-
+![Sơ đồ lớp hệ thống quản lý thú cưng](cd.png)
 
 
 ## Code minh họa phần chính
